@@ -1,0 +1,22 @@
+{% if t7_found %}
+    <ul>
+        <li> LNFill Controller {{ t7_found  }}  found </li>
+        <form method="post" action="">
+        {{ formset.management_form }}
+            <table>
+              <tr>
+                 <td align="center">Channel</td><td align="center">Type</td>
+                 <td align="center">Name</td><td align="center">Enable/Disable</td>
+              </tr>
+              {% for form in formset %}
+                <tr>
+                  <td> {{ form.chan.value}}</td><td>{{ form.ctype}}</td><td> {{ form.cname }}</td><td>{{ form.cenable }}</td>
+                </tr>
+              {% endfor %}
+            </table>
+        </form>
+    </ul>
+{% else %}
+    <p>No LNFill Contollers found on network.</p>
+{% endif %}
+

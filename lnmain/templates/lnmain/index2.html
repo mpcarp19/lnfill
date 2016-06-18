@@ -1,0 +1,22 @@
+{% if t7_found_list %}
+    <ul>
+    {% for t7 in t7_found_list %}
+        <li> LNFill Controller {{ t7  }}  found </li>
+        <table style="width:60%">
+        {% for ch in ch_Config_list %} 
+            {% ifequal ch.serial t7 %}
+                <tr>
+                  <td> Chan={{ ch.chan }}</td>
+                  <td>Type={{ ch.type}}</td>
+                  <td>Name={{ ch.name }}</td>
+                  <td>{{ ch.enable }}</td>
+                </tr>
+            {% endifequal %}
+        {% endfor %}
+        </table>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No LNFill Contollers found on network.</p>
+{% endif %}
+

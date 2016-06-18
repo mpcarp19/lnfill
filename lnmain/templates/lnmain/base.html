@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'lnmain/lnmain.css' %}" />
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery=1%}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LNMain</title>
+        <style>
+           a.test {
+               font-weight: bold;
+               color: red;
+           }
+        </style>
+    </head>
+
+    <body>
+
+
+    <div class="container">
+
+      <!-- This is the logo. Class definition in lnmain.css -->
+
+      <div class="logo">
+         <a href="http://www.anl.gov/"><img
+            src="{% static 'lnmain/argonne_header_logo.jpg' %}"
+            alt="[Argonne Logo]" align="left" border="0" /></a>
+         <a href="http://www.phy.anl.gov/"><img
+  	    src="{% static 'lnmain/CAGRA_image.png' %}"
+	    alt="[Cagra Logo]" height="100"  border="0" align="right" /></a>
+         <div class="logoright">
+            <a href="{%url 'index' %}">LN Auto-Fill Application</a>
+         </div>
+      </div>
+
+      <!-- These are the menus. -->
+
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Menu 1</a></li>
+        <li><a href="#">Menu 2</a></li>
+        <li><a href="#">Menu 3</a></li>
+      </ul>
+
+      <!-- Here is where the page specific content is inserted -->
+
+      <div class="row">
+        <div class="col-md-12">
+
+        {% block body_block %} 
+           No body block defined in your inheriting template.
+        {% endblock %} 
+ 
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+        var $jQ = jQuery.noConflict();
+        // $jQ is now an alias to the jQuery function; creating the new alias is optional.
+        $jQ( "a" ).addClass( "test" );
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,304 @@
+/* argonne.css, Ken Teh, Aug 2006, Sep 2006
+ *
+ * Argonne's web page layout in CSS.
+ * /kt aug2006/ add support for thin-wide layout; adjust names to do this.
+ * /kt sep2006/ add support for long-wide layout
+ */
+body {
+	background-color: #7c7c7c;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	background-image: url(container_bg.png);
+	background-repeat: repeat-y;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 960px;
+	background-position: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* The Logo Banner */
+div.logo {
+	height: 100px;
+	background-color: #000000;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 10px;
+}
+
+div.logo div.logoright {
+	text-align: left;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 16pt;
+	padding-top: 40px;
+	padding-right: 0;
+	padding-bottom: 40px;
+	padding-left: 310px;
+}
+
+div.logo a { text-decoration: none; 
+             color: #FFFFFF;
+ }
+
+/* The menubar */
+div.menubar {
+	padding: 0;
+	height: 28px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #FFFFFF;
+	background-color: #444;
+	margin-top: 3px;
+	margin-bottom: 0;
+}
+
+ul#menu {
+  margin: 0; padding: 0;
+  list-style-type: none;
+}
+
+#menu li {
+	margin: 0;
+	float: left;
+	position: relative;
+	border-right: 3px solid #fff;
+	padding-top: 1.2ex;
+	padding-right: 0.5em;
+	padding-bottom: 1.2ex;
+	padding-left: 0.5em;
+}
+
+#menu li a {
+  margin: 0; padding: 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+div.menusearch {
+  margin: 2px 0 0 0; padding: 0;
+  float: right; position: relative;
+}
+.menusearch form { margin: 0; padding: 0; }
+.menusearch input { margin: 0; padding: 2px 0; font-size: 8pt; }
+
+/* Dropdown menus */
+#menu li ul {
+  margin: 0; padding: 0;
+  display: none;
+  position: absolute;
+  display: none;
+  list-style-type: none;
+  top: 3.5ex;
+  left: 1px;
+}
+
+#menu li:hover ul {
+  display: block;
+  margin: 0 1px; padding: 0;
+  z-index: 20;
+  background-color: #fff;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  border-right: 2px solid #aaa;
+}
+
+#menu li ul li {
+	margin: 2px 0;
+	padding: 0;
+	color: #000;
+	background-color: #fff;
+	border: 0;
+	font-weight: normal;
+	width: 11em;
+}
+
+#menu li ul li.separator {
+	margin: 2px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #999999;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #999999;
+}
+
+/* Blinking dropdown menus */
+#menu li ul li:hover { color: #fff; background-color: #666; }
+#menu li ul a {
+  margin: 0; padding: 0 0 0 1em;
+  text-decoration: none;
+  color: #000; background-color: #fff;
+  border: 0;
+  /* outline-style: none; */
+}
+#menu li ul li:hover a { color: #fff; background-color: #666;}
+
+/* The breadcrumbs bar */
+div.breadcrumbs {
+	clear: both;
+	color: #000000;
+	background-color: #CCCCCC;
+	font-size: 8pt;
+	font-weight: bold;
+	margin-top: 0px; /* solid #FFFFFF; */
+	margin-bottom: 3px;
+	padding-top: 0;
+	padding-right: 0.5em;
+	padding-bottom: 0;
+	padding-left: 0.5em;
+}
+
+div.breadcrumbs a { color: #444; text-decoration: none; }
+div.breadcrumbs a:hover { text-decoration: underline; }
+
+/* The thin-wide layout.  From 456 Berea St. First, the container...
+ * See the longwide variant below.
+ */
+div.thinwide {
+	margin: 0;
+	padding: 0;
+	background-color: #FFFFFF;
+	/* border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #999999;
+	border-bottom-color: #999999; */
+	background-image: url(/images/sidebar_bg.png);
+	background-repeat: repeat-x;
+}
+
+/* For some reason the widths of the thin and wide <div>s cannot add up to
+ * 100%.  It's IE, sigh!
+ */
+div.thinwide div.thin {
+	width: 15%;
+	float: left;
+	color: #444444;
+	background-color: #222;
+	font-size: 9pt;
+	font-weight: normal;
+	background-image: url(/images/sidebar_bg.png);
+	background-repeat: repeat-x;
+}
+
+div.thin div.leftmenu { 
+  margin: 2ex 0 0 0.5em;
+}
+
+.leftmenu ul {
+	margin: 0 0 15px 10px;
+	padding: 0;
+	list-style-type: none;
+}
+.leftmenu li {
+	margin: 0 0;
+}
+.leftmenu a { text-decoration: none; color: #444444; border: 0; outline-style: none; }
+.leftmenu a:hover { text-decoration: underline; }
+
+div.thinwide div.wide {
+	margin: 0;
+	padding: 0;
+	float: right;
+	width: 84%;
+	background-color: #FFFFFF;
+}
+
+div.wide div.content {
+	padding: 0;
+	margin-top: 0;
+	margin-right: 0px;
+	margin-bottom: 0;
+	margin-left: 10px;
+}
+
+/* The longwide layout.  The thinwide layout works only if the content is
+ * longer than the left menu.  If the leftmenu is longer than the content,
+ * replace thinwide with the following longwide.
+ */
+div.longwide {
+  margin: 0; padding: 0;
+  color: #000000; background-color: #FFFFFF;
+  border-top: 3px solid #FFFFFF;
+}
+
+div.longwide div.thin {
+  margin: 0; padding: 0;
+  float: left;
+  width: 19%;
+  color: #444444; background-color: #66C1FF;
+  font-size: 75%;
+  font-weight: bold;
+}
+
+div.longwide div.wide {
+  margin: 0; padding: 0;
+  float: right;
+  width: 80%;
+  color: #000000; background-color: #FFFFFF;
+}
+
+/* After the wide <div> we need to insert a clearthinwide <div> to reset the
+ * floats.
+ */
+div.clearthinwide {
+  margin: 0; padding: 0;
+  clear: both;
+  background-color: #FFFFFF;
+}
+
+/* The Full Layout */
+div.fullwide {
+  margin: 0; padding: 0;
+}
+
+div.fullwide div.content {
+  margin: 0 0.5em; padding: 0;
+}
+
+div.footer {
+	margin: 3px;
+	padding: 5px;
+	text-align: center;
+	font-size: 75%;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.footer p { padding-top: 0.8ex; }
+
+div.clearboth {
+  clear: both;
+  margin: 0; padding: 0;
+  display: none;
+}
+
+hr {
+	margin: 0;
+	padding: 0;
+	height: 1px;
+	color: #999999;
+}

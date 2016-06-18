@@ -1,0 +1,48 @@
+{% extends 'lnmain/base.html' %}
+
+{% block body_block %}
+    <h2>LNFill Manifold {{ t7_found_list.0 }}</h2>
+
+    <div align=middle >
+        <canvas id="myCanvas" width="925" height="600"
+        style="border:1px solid #000000;">
+        </canvas>
+    </div>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font ="20px Arial";
+        ctx.textAlign = "center"
+        // main line
+        ctx.lineWidth = 6;
+        ctx.beginPath();
+        ctx.moveTo(50, 300);
+        ctx.lineTo(875,300);
+        ctx.stroke();
+        // detector lines
+        var i;   
+        for (i = 0; i < 5;i++) {
+           ctx.moveTo(125+i*150, 300);
+           ctx.lineTo(125+i*150, 450);
+           ctx.stroke();
+           ctx.fillText("D",125+i*150,470);
+           ctx.moveTo(200+i*150, 300);
+           ctx.lineTo(200+i*150, 150);
+           ctx.stroke();
+           ctx.fillText("D",200+i*150,140);
+        }
+        // manifold
+        ctx.moveTo(53,300);
+        ctx.lineTo(53,150);
+        ctx.stroke();
+        ctx.fillText("M",53,140);
+        // vent
+        ctx.moveTo(873,300);
+        ctx.lineTo(873,450);
+        ctx.stroke();
+        ctx.fillText("V",873,470);
+    </script>
+
+
+{% endblock %}

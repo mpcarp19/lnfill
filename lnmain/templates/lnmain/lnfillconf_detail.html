@@ -1,0 +1,12 @@
+{% extends 'lnmain/base.html' %}
+
+{% block body_block %}
+
+        <h3>LNFillControler   {{ object.serial_id|stringformat:".9s"}} </h3>
+            <b> Configuration for {{object.ch_addresses}} </b>
+        <p> <b> Ch Type:</b>  {{ object.get_ch_type_display }}</p>
+        <p> <b> Ch Name:</b>  {{ object.ch_name }}</p>
+        <p> <b> Ch Enable:</b> {{ object.get_ch_enable_display}} </p>
+
+{% endblock %}
+

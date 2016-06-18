@@ -1,0 +1,110 @@
+[
+{
+   "model": "lnmain.ch_addresses",
+   "pk": 1,
+   "fields": {
+      "pt100_address": "AIN0",
+      "overflow_address": "CIO0",
+      "valve_address": "FIO0"
+   }
+},
+{
+   "model": "lnmain.ch_addresses",
+   "pk": 2,
+   "fields": {
+      "pt100_address": "AIN1",
+      "overflow_address": "CIO1",
+      "valve_address": "FIO1"
+   }
+},
+{
+   "model": "lnmain.ch_addresses",
+   "pk": 3,
+   "fields": {
+      "pt100_address": "AIN2",
+      "overflow_address": "CIO2",
+      "valve_address": "FIO2"
+   }
+},
+{
+   "model": "lnmain.ch_addresses",
+   "pk": 4,
+   "fields": {
+      "pt100_address": "AIN3",
+      "overflow_address": "CIO3",
+      "valve_address": "FIO3"
+   }
+},
+{
+   "model": "lnmain.ch_addresses",
+   "pk": 5,
+   "fields": {
+      "pt100_address": "AIN4",
+      "overflow_address": "EIO0",
+      "valve_address": "FIO4"
+   }
+},
+{
+   "model": "lnmain.ch_addresses",
+   "pk": 6,
+   "fields": {
+      "pt100_address": "AIN5",
+      "overflow_address": "EIO1",
+      "valve_address": "FIO5"
+   }
+},
+{
+   "model": "lnmain.ch_addresses",
+   "pk": 7,
+   "fields": {
+      "pt100_address": "AIN6",
+      "overflow_address": "EIO2",
+      "valve_address": "FIO6"
+   }
+},
+{
+   "model": "lnmain.ch_addresses",
+   "pk": 8,
+   "fields": {
+      "pt100_address": "AIN7",
+      "overflow_address": "EIO3",
+      "valve_address": "FIO7"
+   }
+},
+{
+   "model": "lnmain.ch_addresses",
+   "pk": 9,
+   "fields": {
+      "pt100_address": "AIN8",
+      "overflow_address": "EIO4",
+      "valve_address": "MIO0"
+   }
+},
+{
+   "model": "lnmain.ch_addresses",
+   "pk": 10,
+   "fields": {
+      "pt100_address": "AIN9",
+      "overflow_address": "EIO5",
+      "valve_address": "MIO1"
+   }
+},
+{
+   "model": "lnmain.ch_addresses",
+   "pk": 11,
+   "fields": {
+      "pt100_address": "AIN10",
+      "overflow_address": "EIO6",
+      "valve_address": "MIO2"
+   }
+},
+{
+   "model": "lnmain.ch_addresses",
+   "pk": 12,
+   "fields": {
+      "pt100_address": "AIN11",
+      "overflow_address": "EIO7",
+      "valve_address": "DAC1"
+   }
+}
+]

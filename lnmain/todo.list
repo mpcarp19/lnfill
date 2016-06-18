@@ -1,0 +1,13 @@
+to do form list:
+
+Need to create and populate a formset in view.py:
+
+(1) formset will have 12 forms: id 0-11 which will be channel 1-12
+(2) once we define formset need to populate the values
+(3) send form to template
+
+-------- 
+
+Now edit template displayform.html
+
+

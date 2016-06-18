@@ -1,0 +1,13 @@
+{% extends 'lnmain/base.html' %}
+
+{% block body_block %}
+    <h2>LNFill Controller {{ t7info.0 }} </h2>
+    <h3>Configuration for Channel {{ t7info.1}}</h3>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit Configuration" />
+    </form>
+ 
+{% endblock %}

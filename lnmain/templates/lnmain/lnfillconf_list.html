@@ -1,0 +1,45 @@
+{% extends 'lnmain/base.html' %}
+
+{% block body_block %}
+    {% if t7_found %}
+        <div align="middle">
+        <h2>LNFillController Configurations</h2>
+        </div>
+        <ul>
+        {% for t7 in t7_found %}
+           <h4> LNFill Controller {{ t7  }}</h4>
+           <div class="center-block">
+           <table style="width:70%" class="table table-striped">
+             <thead>
+                <tr >
+                  <th class="text-center">Channel</th>
+                  <th class="text-center">Type</th>
+                  <th class="text-center">Name</th>
+                  <th class="text-center">Enable/Disable</th>
+                </tr>
+             </thead>
+             <tbody>
+             {% for ch in lnfill_list %} 
+                {% if t7 in ch.serial_id %}
+                    <tr align="center">
+                      <td> <a href="{%url 'display_modelform' ch.id %}">
+                           {{ ch.serial_id|cut:t7|cut:"," }}</a></td>
+                      <td>{{ ch.get_ch_type_display}}</td>
+                      <td>{{ ch.ch_name }}</td>
+                      <td>{{ ch.get_ch_enable_display }}</td>
+                    </tr>
+                {% endif %}
+             {% endfor %}
+             </tbody>
+           </table>
+           </div>
+           <br>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No LNFill Contollers found on network.</p>
+    {% endif %}
+ 
+{% endblock %}
+
+
